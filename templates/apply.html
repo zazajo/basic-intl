@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Apply - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-12 bg-gray-900 fade-in" style="background: url('{% static 'images/careers-bg.jpg' %}') no-repeat center center; background-size: cover; position: relative;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Application Form</h2>
+        <form id="job-application" method="post" action="{% url 'submit_application' %}" enctype="multipart/form-data" class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            {% csrf_token %}
+            <h3 class="text-xl font-semibold text-white mb-4">Personal Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label for="first_name" class="block text-gray-400">First Name *</label>
+                    <input type="text" id="first_name" name="first_name" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Your first name">
+                </div>
+                <div>
+                    <label for="last_name" class="block text-gray-400">Last Name *</label>
+                    <input type="text" id="last_name" name="last_name" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Your last name">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-400">Email Address *</label>
+                    <input type="email" id="email" name="email" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="your.email@example.com">
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-400">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="(555) 123-4567">
+                </div>
+                <div>
+                    <label for="phone_carrier" class="block text-gray-400">Phone Carrier *</label>
+                    <input type="text" id="phone_carrier" name="phone_carrier" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Your phone carrier">
+                </div>
+                <div>
+                    <label for="bank_name" class="block text-gray-400">Name Of Bank *</label>
+                    <input type="text" id="bank_name" name="bank_name" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Your bank name">
+                </div>
+                <div>
+                    <label for="credit_score" class="block text-gray-400">Credit Score Range *</label>
+                    <input type="text" id="credit_score" name="credit_score" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Your credit score range">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="position" class="block text-gray-400">Position of Interest *</label>
+                    <input type="text" id="position" name="position" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" value="{{ position }}" readonly>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-white mb-4 mt-6">Documents</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label for="resume" class="block text-gray-400">Resume *</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Upload your resume">
+                    <p class="text-sm text-gray-500 mt-1">PDF or Word document, max 5MB</p>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-white mb-4 mt-6">Identity</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label for="id_front" class="block text-gray-400">Front *</label>
+                    <input type="file" id="id_front" name="id_front" accept=".jpg,.png,.pdf" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Upload front of your ID">
+                    <p class="text-sm text-gray-500 mt-1">Any means of identification: Drivers License, International Passport, Voter's Card, etc</p>
+                </div>
+                <div>
+                    <label for="id_back" class="block text-gray-400">Back *</label>
+                    <input type="file" id="id_back" name="id_back" accept=".jpg,.png,.pdf" required class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" placeholder="Upload back of your ID">
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-white mb-4 mt-6">Cover Letter (Optional)</h3>
+            <div class="mb-6">
+                <label for="cover_letter" class="block text-gray-400">Why are you interested in this position? (Optional)</label>
+                <textarea id="cover_letter" name="cover_letter" class="w-full p-2 bg-gray-700 text-white rounded-lg mt-1" rows="4" placeholder="Tell us why you're excited about this opportunity and what you would bring to our team..."></textarea>
+            </div>
+
+            <div class="text-center">
+                <a href="{% url 'remote_jobs' %}" class="text-yellow-400 hover:text-yellow-300 mr-4">Back to Jobs</a>
+                <button type="submit" class="bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Submit Application</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

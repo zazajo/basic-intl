@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - Avalant Groups{% endblock %}
+{% block content %}
+<!-- Intro Section -->
+<section class="py-8 text-center fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Welcome to Avalant Groups</h1>
+    <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">We are built on a foundation of honesty, providing trusted insurance solutions for over 14 years. Join us in protecting what matters most.</p>
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 p-4 bg-gray-800 rounded-lg">
+        <a href="#contact" class="btn-custom bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 inline-block" style="display: inline-block; min-width: 150px; text-align: center;">Get Your Quote</a>
+        <a href="#careers" class="btn-custom bg-teal-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-teal-500 inline-block" style="display: inline-block; min-width: 150px; text-align: center;">Join Our Team</a>
+    </div>
+</section>
+
+<!-- Insurance Services Section -->
+<section class="py-8 bg-gray-800 rounded-lg shadow-lg fade-in" id="services">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Our Insurance Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Health Insurance</h3>
+            <p class="text-gray-300">Comprehensive coverage for you and your family.</p>
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Life Insurance</h3>
+            <p class="text-gray-300">Secure your loved ones' future with our plans.</p>
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Auto Insurance</h3>
+            <p class="text-gray-300">Protection for your vehicle and peace of mind.</p>
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Home Insurance</h3>
+            <p class="text-gray-300">Safeguard your home with tailored policies.</p>
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Travel Insurance</h3>
+            <p class="text-gray-300">Coverage for your journeys worldwide.</p>
+        </div>
+        <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Business Benefits</h3>
+            <p class="text-gray-300">Solutions to support your business needs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Snippet -->
+<section class="py-8 text-center fade-in" id="about">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">About Us</h2>
+    <p class="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">Avalant Groups has been a trusted name for over 14 years, delivering innovative insurance solutions with integrity and care.</p>
+    <a href="{% url 'about' %}" class="btn-custom bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Learn More</a>
+</section>
+
+<!-- Contact Section -->
+<section class="py-8 bg-gray-800 rounded-lg shadow-lg fade-in" id="contact">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Contact Us</h2>
+    <div class="text-center">
+        <p class="text-gray-300 mb-2"><strong>Phone:</strong> (702) 686-7820</p>
+        <p class="text-gray-300 mb-2"><strong>Email:</strong> <a href="mailto:info@zureinsurance.com" class="hover:text-yellow-400">info@avalantgroups.com</a></p>
+        <p class="text-gray-300 mb-2"><strong>Office:</strong> Patrick V. McNamara Federal Building, 477 Michigan Avenue, Detroit, MI 48226-2523, USA</p>
+        <p class="text-gray-300 mb-2"><strong>Business Hours:</strong> Mon-Sat 9:00 AM - 5:00 PM, Sun Closed</p>
+        <a href="#" class="text-yellow-400 hover:underline">View on Google Maps</a>
+    </div>
+</section>
+{% endblock %}

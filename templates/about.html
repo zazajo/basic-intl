@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-8">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center">About Us</h1>
+    <p class="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">Avalant Groups has been a trusted leader in the insurance industry for over 14 years, built on a foundation of honesty, integrity, and exceptional customer service. Our mission is to protect what matters most to our clients by offering innovative and comprehensive insurance solutions.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-2xl font-bold mb-4">Our History</h2>
+            <p class="text-gray-300">Founded in 2011, Avalant Groups began with a small team dedicated to providing personalized insurance plans. Over the years, we’ve grown into a respected name, serving thousands of clients across the United States with a commitment to excellence.</p>
+        </div>
+        <div>
+            <h2 class="text-2xl font-bold mb-4">Our Values</h2>
+            <p class="text-gray-300">We uphold honesty, transparency, and care in every interaction. Our team works tirelessly to ensure our clients receive the best possible support and coverage tailored to their needs.</p>
+        </div>
+    </div>
+    <div class="text-center mt-8">
+        <a href="{% url 'careers' %}" class="btn-custom bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Join Our Team</a>
+    </div>
+</section>
+{% endblock %}

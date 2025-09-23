@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Careers - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-12 bg-gray-900 fade-in" style="background: url('{% static 'images/careers-bg.jpg' %}') no-repeat center center; background-size: cover; position: relative;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Work-Life Balance -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">Work-Life Balance</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">Enjoy flexible schedules and comprehensive benefits that support your life outside work.</p>
+        </div>
+
+        <!-- Why Talented Professionals Choose Zure Insurance -->
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Why Talented Professionals Choose Zure Insurance?</h2>
+            <p class="text-lg text-gray-300 mb-6 text-center max-w-3xl mx-auto">At Zure Insurance, we don't just offer jobs we build careers. Here's why skilled candidates choose to grow with us.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Competitive Compensation</h3>
+                    <p class="text-gray-400">We believe great talent deserves great pay. Our compensation packages are structured to reflect your value, experience, and commitment.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Comprehensive Benefits</h3>
+                    <p class="text-gray-400">From health coverage to wellness programs and paid time off, our benefits are designed to support you and your family’s well-being physically, mentally, and financially.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Professional Development</h3>
+                    <p class="text-gray-400">We invest in you. Through training, upskilling programs, and mentorship, we help you grow personally and professionally no matter your role.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Flexible Work Schedules</h3>
+                    <p class="text-gray-400">Whether you’re a parent, student, or someone who values work-life balance, we offer flexible and remote options to fit your lifestyle.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Supportive Work Environment</h3>
+                    <p class="text-gray-400">We foster a positive, inclusive, and collaborative culture where every team member feels respected and valued.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <h3 class="text-xl font-semibold text-white mb-3">Additional Perks</h3>
+                    <p class="text-gray-400">Enjoy performance bonuses, recognition programs, paid internet (for remote roles), and access to exclusive employee resources and tools that make your job easier and more rewarding.</p>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="{% url 'contact' %}" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300 inline-block bg-gray-800 bg-opacity-20 p-2 rounded-lg">Apply Now</a>
+            </div>
+        </div>
+
+        <!-- Current Openings -->
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Current Openings</h2>
+            <p class="text-lg text-gray-300 mb-6 text-center">We're looking for talented and passionate individuals to join our growing team.</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
+                <select id="all-jobs-dropdown" class="bg-gray-800 text-white p-2 rounded-lg w-full md:w-1/3">
+                    <option value="">All Jobs</option>
+                    <option value="csr">Customer Service Representative (CSR)</option>
+                    <option value="data-entry">Data Entry Clerk</option>
+                    <option value="live-chat">Live Chat Support Agent</option>
+                    <option value="virtual-assistant">Virtual Assistant</option>
+                    <option value="billing-claims">Billing & Claims Support Agent</option>
+                </select>
+                <a href="{% url 'part_time_jobs' %}" id="part-time-button" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Part-Time</a>
+                <a href="{% url 'remote_jobs' %}" id="remote-button" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Remote</a>
+            </div>
+            <div id="job-listings" class="grid grid-cols-1 gap-6">
+                <p class="text-gray-400 text-center">Select a category or job to view details.</p>
+            </div>
+            <p class="text-center text-gray-400 mt-4">Don't See the Perfect Fit? We're always looking for talented individuals to join our team. Submit a general application and we'll keep you in mind for future opportunities that match your skills and interests.</p>
+        </div>
+
+        <!-- Reach out to us -->
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Reach out to us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-3">Application Tips</h3>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Tailor your resume to emphasize your insurance experience, customer relations, and achievements.</li>
+                        <li>Share real examples of how you've solved problems and supported clients with care.</li>
+                        <li>Learn about our company mission of “true protection with deep roots.”</li>
+                        <li>Come prepared with questions about our team culture and growth paths.</li>
+                    </ul>
+                    <p class="text-gray-400 mt-4">Questions about the application process?</p>
+                    <p class="text-gray-400"><strong>Email:</strong> <a href="mailto:info@avalantgroups.com" class="text-yellow-400 hover:text-yellow-300">info@zureinsurance.com</a></p>
+                    <p class="text-gray-400"><strong>Phone:</strong> <a href="tel:(702) 686-7820" class="text-yellow-400 hover:text-yellow-300">(702) 686-7820</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Highlights -->
+        <div class="text-center mb-12">
+            <p class="text-lg text-gray-300">Equal opportunity employer | Comprehensive benefits package | Professional growth support | Empowering and inclusive culture</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Part-Time Jobs - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-12 bg-gray-900 fade-in" style="background: url('{% static 'images/careers-bg.jpg' %}') no-repeat center center; background-size: cover; position: relative;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Part-Time Jobs</h2>
+        <div class="grid grid-cols-1 gap-6">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold text-white mb-2">Customer Service Representative (CSR)</h3>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Customer Support</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Multiple Locations</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Part-Time</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">$ Competitive</span>
+                </div>
+                <p class="text-gray-400 mb-4">Handle client communications.</p>
+                <a href="{% url 'contact' %}" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500">Apply Now</a>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold text-white mb-2">Data Entry Clerk</h3>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Administration</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Multiple Locations</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Part-Time</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">$ Competitive</span>
+                </div>
+                <p class="text-gray-400 mb-4">Enter and maintain data records.</p>
+                <a href="{% url 'contact' %}" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500">Apply Now</a>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <a href="{% url 'careers' %}" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Back to Careers</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Services - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-12 bg-gray-900 fade-in" style="background: url('{% static 'images/services-bg.png' %}') no-repeat center center; background-size: cover; position: relative;">
+    <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Dark overlay for readability -->
+    <div class="container mx-auto px-4 relative z-10">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center text-yellow-400">Our Services</h1>
+        <p class="text-lg text-gray-300 mb-12 text-center max-w-2xl mx-auto">Explore our comprehensive insurance solutions tailored to your needs with unmatched expertise and care.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Health Insurance -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/health.png' %}" class="h-12 w-12" alt="Health Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Health Insurance</h3>
+                <p class="text-gray-400 mb-4">Affordable plans covering medical, dental, and vision care for individuals and families.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Medical coverage up to $1M</li>
+                        <li>Dental and vision plans</li>
+                        <li>24/7 emergency support</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Health Now</a>
+                </div>
+            </div>
+
+            <!-- Life Insurance -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/life.png' %}" class="h-12 w-12" alt="Life Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Life Insurance</h3>
+                <p class="text-gray-400 mb-4">Flexible policies to secure your family's financial future with competitive rates.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Term and whole life options</li>
+                        <li>Up to $500K payout</li>
+                        <li>Free financial planning</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Future Now</a>
+                </div>
+            </div>
+
+            <!-- Auto Insurance -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/auto.png' %}" class="h-12 w-12" alt="Auto Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Auto Insurance</h3>
+                <p class="text-gray-400 mb-4">Comprehensive coverage for your vehicles with 24/7 roadside assistance.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Collision and liability coverage</li>
+                        <li>24/7 roadside assistance</li>
+                        <li>Rental car reimbursement</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Ride Now</a>
+                </div>
+            </div>
+
+            <!-- Home Insurance -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/house.png' %}" class="h-12 w-12" alt="House Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Home Insurance</h3>
+                <p class="text-gray-400 mb-4">Protect your home against damage, theft, and liability with customizable plans.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Property damage coverage</li>
+                        <li>Liability protection</li>
+                        <li>Personal belongings insurance</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Home Now</a>
+                </div>
+            </div>
+
+            <!-- Travel Insurance -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/travel.png' %}" class="h-12 w-12" alt="Travel Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Travel Insurance</h3>
+                <p class="text-gray-400 mb-4">Coverage for trips, including cancellations, medical emergencies, and lost luggage.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Trip cancellation coverage</li>
+                        <li>Emergency medical insurance</li>
+                        <li>Lost luggage protection</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Trip Now</a>
+                </div>
+            </div>
+
+            <!-- Business Benefits -->
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div class="text-yellow-400 text-4xl mb-4">
+                    <img src="{% static 'images/business.png' %}" class="h-12 w-12" alt="Business Icon">
+                </div>
+                <h3 class="text-2xl font-semibold mb-3 text-white">Business Benefits</h3>
+                <p class="text-gray-400 mb-4">Insurance and benefits packages designed to support small and large businesses.</p>
+                <div class="text-sm text-gray-300 mb-4">
+                    <strong>What's Included:</strong>
+                    <ul class="list-disc list-inside">
+                        <li>Business liability coverage</li>
+                        <li>Employee health plans</li>
+                        <li>Risk management support</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 bg-opacity-20 p-2 rounded-lg">
+                    <a href="{% url 'contact' %}" class="mt-4 inline-block bg-yellow-400 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Protect Your Business Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

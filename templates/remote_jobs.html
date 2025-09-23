@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Remote Jobs - Avalant Groups{% endblock %}
+{% block content %}
+<section class="py-12 bg-gray-900 fade-in" style="background: url('{% static 'images/careers-bg.jpg' %}') no-repeat center center; background-size: cover; position: relative;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6 text-center">Remote Jobs</h2>
+        <div id="job-listings" class="grid grid-cols-1 gap-6">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold text-white mb-2">Live Chat Support Agent</h3>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Customer Support</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Remote</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Full-Time</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">$ Competitive</span>
+                </div>
+                <p class="text-gray-400 mb-4">Provide real-time support via live chat to resolve customer queries.</p>
+                <div class="flex gap-4">
+                    <a href="{% url 'apply' %}?position=Live Chat Support Agent" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Apply Now</a>
+                </div>
+                <div id="live-chat-details" class="hidden mt-4">
+                    <p class="text-gray-400 mb-2">Posted: September 22, 2025, 12:36 PM WAT</p>
+                    <p class="text-gray-400 mb-2">Reports To: Customer Support Manager</p>
+                    <p class="text-gray-400 mb-2">Team Size: 5-10</p>
+                    <h4 class="text-lg font-semibold text-white mb-2">About the Role</h4>
+                    <p class="text-gray-400 mb-4">Assist customers through live chat, ensuring quick and effective resolutions.</p>
+                    <h4 class="text-lg font-semibold text-white mb-2">Benefits & Perks</h4>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Remote work</li>
+                        <li>Flexible shifts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold text-white mb-2">Virtual Assistant</h3>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Administration</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Remote</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">Part-Time</span>
+                    <span class="bg-gray-700 text-gray-300 px-2 py-1 rounded-full text-sm">$ Competitive</span>
+                </div>
+                <p class="text-gray-400 mb-4">Provide administrative support remotely, handling tasks and scheduling.</p>
+                <div class="flex gap-4">
+                    <a href="{% url 'apply' %}?position=Virtual Assistant" class="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300">Apply Now</a>
+                </div>
+                <div id="virtual-assistant-details" class="hidden mt-4">
+                    <p class="text-gray-400 mb-2">Posted: September 22, 2025, 12:36 PM WAT</p>
+                    <p class="text-gray-400 mb-2">Reports To: Administration Manager</p>
+                    <p class="text-gray-400 mb-2">Team Size: 3-5</p>
+                    <h4 class="text-lg font-semibold text-white mb-2">About the Role</h4>
+                    <p class="text-gray-400 mb-4">Support team with virtual administrative tasks and organization.</p>
+                    <h4 class="text-lg font-semibold text-white mb-2">Benefits & Perks</h4>
+                    <ul class="list-disc list-inside text-gray-400">
+                        <li>Remote work</li>
+                        <li>Flexible hours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="{% url 'careers' %}" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Back to Careers</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
