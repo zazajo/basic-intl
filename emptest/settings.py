@@ -39,6 +39,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['172.20.10.4', 'localhost', '127.0.0.1', '.vercel.app', 'www.avalantgroups.org', 'avalantgroups.org']
 
+USE_X_FORWARDED_HOST = True
 
 # Application definition
 
