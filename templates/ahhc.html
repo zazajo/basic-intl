@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AHHC – Avalant Hope Haven Charity{% endblock %}
+
+{% block content %}
+<!-- ==== HERO SECTION ==== -->
+<section class="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-center"
+         style="background-image: url('{% static 'images/ahhc-bg.png' %}');">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="relative z-10 px-4 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-400 mb-4">
+            Avalant Hope Haven Charity
+        </h1>
+        <p class="text-xl md:text-2xl text-white mb-8 font-light">
+            “Hope Begins Here”
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#donate"
+               class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-500 transition transform hover:scale-105 shadow-lg">
+                Donate Now
+            </a>
+            <a href="{% url 'contact' %}"
+               class="inline-block bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 hover:text-gray-900 transition">
+                Contact Us
+                </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==== CONCEPT ==== -->
+<section class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6">Our Concept</h2>
+        <p class="text-lg text-gray-300 leading-relaxed">
+            The <strong>Avalant Hope Haven Charity (AHHC)</strong> is a sanctuary of care and opportunity for children in shelters and foster homes, offering a safe haven where hope can flourish. Rooted in Avalant Groups’ mission to protect and secure lives, AHHC transforms the lives of vulnerable youth by providing safe spaces, essential resources, and pathways to stability.
+        </p>
+    </div>
+</section>
+
+<!-- ==== PROGRAMS GRID ==== -->
+<section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8 max-w-5xl">
+        <!-- Trauma-Informed Care -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg text-center">
+            <img src="{% static 'images/ahhc-classroom.png' %}" alt="Classroom" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Trauma-Informed Care</h3>
+            <p class="text-gray-400">Healing environments that help children process past challenges.</p>
+        </div>
+
+        <!-- Education -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg text-center">
+            <img src="{% static 'images/ahhc-recreation.png' %}" alt="Recreation" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Academic Support</h3>
+            <p class="text-gray-400">Tutoring, laptops, and scholarships to unlock potential.</p>
+        </div>
+
+        <!-- Community -->
+        <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-lg text-center">
+            <img src="{% static 'images/ahhc-community.png' %}" alt="Community" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-2">Community Integration</h3>
+            <p class="text-gray-400">Sports, arts, and partnerships that build belonging.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==== MISSION STATEMENT ==== -->
+<section class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-6">Mission Statement</h2>
+        <p class="text-lg text-gray-300 leading-relaxed italic">
+            The Avalant Hope Haven Charity is committed to creating safe, supportive havens for children in shelters and foster homes. Through trauma-informed care, educational opportunities, recreational programs, and community partnerships, we empower youth to heal from past challenges, embrace their potential, and build stable, hopeful futures. Our mission is to ensure every child feels secure, valued, and inspired to thrive.
+        </p>
+    </div>
+</section>
+
+<!-- ==== DONATE SECTION (highlighted) ==== -->
+<section id="donate" class="py-20 bg-gradient-to-r from-yellow-400 to-yellow-600 text-gray-900">
+    <div class="container mx-auto px-4 text-center max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Your Gift Changes Lives</h2>
+        <p class="text-lg mb-8">
+            Every dollar helps provide meals, books, counseling, and a brighter tomorrow.
+        </p>
+        <a href="https://your-payment-link.com/donate" target="_blank"
+           class="inline-block bg-gray-900 text-yellow-400 font-bold py-4 px-12 rounded-full hover:bg-gray-800 transition transform hover:scale-105 text-xl shadow-xl">
+            DONATE NOW
+        </a>
+        <p class="mt-6 text-sm opacity-80">
+            *Replace the link above with your actual payment gateway (PayPal, Stripe, etc.)*
+        </p>
+    </div>
+</section>
+
+<!-- ==== FOOTER CALL-TO-ACTION ==== -->
+<section class="py-12 bg-gray-900 text-center">
+    <p class="text-lg text-gray-400">
+        Ready to make a difference? <a href="{% url 'contact' %}" class="text-yellow-400 hover:underline">Get in touch</a> or <a href="#donate" class="text-yellow-400 hover:underline">donate today</a>.
+    </p>
+</section>
+{% endblock %}

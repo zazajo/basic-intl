@@ -85,3 +85,6 @@ def apply(request):
 
 def careers(request):
     return render(request, 'careers.html')
+
+def ahhc(request):
+    return render(request, 'ahhc.html')

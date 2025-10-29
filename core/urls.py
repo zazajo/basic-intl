@@ -12,4 +12,5 @@ urlpatterns = [
     path('remote-jobs/', views.remote_jobs, name='remote_jobs'),
     path('apply/', views.apply, name='apply'),
     path('submit-application/', views.submit_application, name='submit_application'),
+    path('ahhc/', views.ahhc, name='ahhc'),
 ]
